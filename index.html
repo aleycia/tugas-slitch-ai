@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed": "#261a00",
+          "on-primary-fixed-variant": "#85145a",
+          "tertiary-fixed-dim": "#f9bd22",
+          "background": "#fff8f8",
+          "outline": "#87717a",
+          "on-tertiary-fixed-variant": "#5c4300",
+          "tertiary-container": "#fef08a",
+          "secondary": "#a855f7",
+          "surface-tint": "#a43073",
+          "on-surface-variant": "#544249",
+          "error": "#ba1a1a",
+          "inverse-surface": "#342f31",
+          "surface-container-lowest": "#ffffff",
+          "on-error": "#ffffff",
+          "on-tertiary-container": "#473300",
+          "on-error-container": "#93000a",
+          "inverse-on-surface": "#f8eef0",
+          "surface-container-highest": "#fce7f3",
+          "surface-dim": "#e1d8da",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#ffafd3",
+          "primary": "#db2777",
+          "surface-container-low": "#fdf2f4",
+          "tertiary-fixed": "#ffdf9f",
+          "on-primary-fixed": "#3d0026",
+          "primary-fixed-dim": "#ffafd3",
+          "on-surface": "#2d1b24",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "outline-variant": "#f9a8d4",
+          "surface-variant": "#fce7f3",
+          "primary-container": "#f472b6",
+          "secondary-container": "#e9d5ff",
+          "secondary-fixed-dim": "#ddb8ff",
+          "error-container": "#ffdad6",
+          "surface-container": "#fff1f3",
+          "tertiary": "#d97706",
+          "surface-bright": "#fff8f8",
+          "on-secondary-container": "#581c87",
+          "surface": "#fff8f8",
+          "primary-fixed": "#ffd8e7",
+          "on-secondary-fixed": "#2c0051",
+          "surface-container-high": "#fae8eb",
+          "on-primary-container": "#500724",
+          "secondary-fixed": "#f0dbff",
+          "on-secondary-fixed-variant": "#62259b",
+          "on-background": "#2d1b24"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "2.5rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-desktop": "1.5rem",
+          "space-xl": "2.5rem",
+          "margin": "1rem",
+          "margin-desktop": "2rem",
+          "gutter": "1rem",
+          "gutter-sm": "1rem",
+          "margin-sm": "1rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "display-lg": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "display-lg-mobile": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "code-lg": ["JetBrains Mono"],
+          "code-sm": ["JetBrains Mono"],
+          "label-caps": ["JetBrains Mono"]
+        },
+        "fontSize": {
+          "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+          "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+          "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+          "display-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+          "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }],
+          "code-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "code-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }],
+          "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }]
+        }
+      }
+    }
+  }
+</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl border-b border-pink-100 shadow-[0_2px_12px_rgba(244,114,182,0.08)]"><div class="h-16 px-gutter-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-pink-100 border border-pink-200 flex items-center justify-center text-primary shadow-sm"><span class="text-base">🌸</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps text-primary tracking-wider uppercase font-semibold">SMKN 2 SURAKARTA ✨</span></div><span class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-1">Adinda's Resume <span class="text-xs">🎀</span></span></div></div><div class="flex items-center gap-space-sm"><a class="h-10 px-3.5 rounded-full bg-pink-50 border border-pink-200 text-primary flex items-center gap-1.5 hover:bg-pink-100 transition-colors shadow-sm" data-path="contact" href="#"><span class="text-sm">💌</span><span class="font-code-sm text-code-sm font-bold">Contact</span></a><img alt="Alya Putri Pratama" class="w-8 h-8 rounded-full object-cover border-2 border-pink-300 ring-2 ring-pink-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2gEZLf6cCkBdwnDMLU-ytlT9jzhbrvL2ke4_8yuLqTgRWjPpnLuPFq4-EU4HEiSvncxmbWRnJHRO9hXtY1NIkHDOrc2eeU_sK737rINlqd4wKg6gLZbvYFxqo0YyZR2xt_8Zsmz-BlEf6aOwFmIhDxaYw2eIeB2QEZhpS2r8XlyGQgo-XdvB-gYlaRi3-LDx_2s9gn9kcC1It_xaajm0lZBOS5Ba1eak4GtSltGA"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full px-margin-sm md:px-gutter py-space-md gap-space-lg text-on-surface">
+<!-- Micro Header Quick Status -->
+<div class="flex items-center justify-between bg-surface-container-lowest border border-pink-200/70 px-space-md py-space-sm rounded-full shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-caps text-label-caps text-primary font-bold tracking-wider flex items-center gap-1">💖 STATUS: AKTIF TERDAFTAR</span>
+</div>
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+<span>Surakarta, Jawa Tengah 📍</span>
+</div>
+</div>
+<!-- Responsive 2-Column Grid (Stacked on Mobile, 2 Columns on Desktop) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg w-full items-start">
+<!-- ================= KOLOM KIRI (PROFILE & TECH STACK) ================= -->
+<div class="flex flex-col gap-space-md lg:col-span-5 w-full">
+<!-- Profile Card -->
+<div class="relative bg-surface-container-lowest border border-pink-200/80 rounded-xl p-space-md flex flex-col items-center text-center shadow-[0_8px_24px_rgba(244,114,182,0.12)] overflow-hidden">
+<!-- Ambient Top Accent Gradient -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-24 bg-gradient-to-r from-pink-300/40 via-purple-300/30 to-pink-200/40 blur-2xl pointer-events-none rounded-full"></div>
+<!-- Cute Floating Sticker Top Right -->
+<div class="absolute top-3 right-3 text-lg select-none">✨🌸</div>
+<!-- Avatar Container -->
+<div class="relative mb-space-sm">
+<div class="relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-pink-400 via-rose-300 to-purple-400 shadow-[0_0_20px_rgba(244,114,182,0.4)]">
+<img alt="Adinda Putri Maharani - Siswi RPL SMKN 2 Surakarta" class="w-full h-full rounded-full object-cover bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2gEZLf6cCkBdwnDMLU-ytlT9jzhbrvL2ke4_8yuLqTgRWjPpnLuPFq4-EU4HEiSvncxmbWRnJHRO9hXtY1NIkHDOrc2eeU_sK737rINlqd4wKg6gLZbvYFxqo0YyZR2xt_8Zsmz-BlEf6aOwFmIhDxaYw2eIeB2QEZhpS2r8XlyGQgo-XdvB-gYlaRi3-LDx_2s9gn9kcC1It_xaajm0lZBOS5Ba1eak4GtSltGA"/>
+</div>
+<!-- Pulsing Status Pin -->
+<div class="absolute bottom-1 right-1 flex items-center justify-center w-6 h-6 rounded-full bg-white shadow-md border border-pink-200">
+<span class="w-3.5 h-3.5 rounded-full bg-pink-400 animate-ping absolute opacity-75"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+</div>
+</div>
+<!-- Open for PKL Badge -->
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pink-50 border border-pink-200 text-primary font-label-caps text-label-caps font-bold uppercase tracking-wider mb-space-sm shadow-sm">
+<span>🌸</span>
+<span>Open for PKL / Magang Industri</span>
+<span class="text-xs">✨</span>
+</div>
+<!-- Student Title -->
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold flex items-center gap-1.5 justify-center">Adinda Putri Maharani <span class="text-sm">🎀</span></h2>
+<p class="font-code-sm text-code-sm text-primary font-medium mt-0.5">NISN: 0068192031 • Kelas XII RPL A</p>
+<!-- School Metadata Pills -->
+<div class="grid grid-cols-2 gap-space-xs w-full mt-space-md">
+<div class="bg-pink-50/70 border border-pink-100 p-space-sm rounded-lg flex flex-col items-center justify-center">
+<span class="font-label-caps text-label-caps text-pink-600 uppercase font-semibold">🏫 Institusi</span>
+<span class="font-body-sm text-body-sm text-on-surface font-bold text-center mt-0.5">SMKN 2 Surakarta</span>
+</div>
+<div class="bg-purple-50/70 border border-purple-100 p-space-sm rounded-lg flex flex-col items-center justify-center">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">🎓 Angkatan</span>
+<span class="font-body-sm text-body-sm text-on-surface font-bold text-center mt-0.5">2023 – 2026</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col gap-space-xs w-full mt-space-md">
+<a class="w-full py-2.5 px-space-md rounded-full bg-gradient-to-r from-pink-500 via-rose-400 to-pink-500 text-white font-headline-sm text-body-md font-bold flex items-center justify-center gap-space-xs shadow-[0_6px_18px_rgba(219,39,119,0.3)] hover:opacity-95 transition-all" download="" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Unduh Resume (PDF) 📄</span>
+</a>
+<div class="flex items-center gap-space-xs w-full">
+<a class="flex-1 py-2 px-space-sm rounded-full bg-pink-50 border border-pink-200 text-primary hover:bg-pink-100 transition-colors flex items-center justify-center gap-1 font-code-sm text-code-sm font-semibold" href="https://github.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GitHub 💻</span>
+</a>
+<a class="flex-1 py-2 px-space-sm rounded-full bg-pink-50 border border-pink-200 text-primary hover:bg-pink-100 transition-colors flex items-center justify-center gap-1 font-code-sm text-code-sm font-semibold" href="https://linkedin.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>LinkedIn 💖</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Technical Skills & Proficiency -->
+<div class="bg-surface-container-lowest border border-pink-200/80 rounded-xl p-space-md flex flex-col gap-space-md shadow-[0_8px_24px_rgba(244,114,182,0.1)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center text-primary text-sm font-bold">🌸</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Tech Proficiency</h3>
+</div>
+<span class="font-code-sm text-code-sm text-primary bg-pink-50 border border-pink-200 px-2.5 py-0.5 rounded-full font-semibold">✨ 6 Stacks</span>
+</div>
+<!-- Skills Progress Bars -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Laravel -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">Laravel / PHP MVC 🧁</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">88%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-pink-100 overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-pink-400 to-rose-500 shadow-[0_0_8px_rgba(244,114,182,0.6)]" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Item 2: Flutter -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">Flutter &amp; Dart Mobile 📱</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">82%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-purple-100 overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 shadow-[0_0_8px_rgba(168,85,247,0.5)]" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Item 3: JavaScript & Vue/React -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">JavaScript &amp; React / Vue ⚛️</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">85%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-pink-100 overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-rose-400 to-pink-500" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Item 4: Database -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">MySQL &amp; PostgreSQL 🗄️</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">80%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-amber-100 overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-pink-400 to-amber-400" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Item 5: Git & DevOps -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">Git, GitHub &amp; Linux Basics 🐙</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">78%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-purple-100 overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-pink-400 to-purple-400" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Item 6: UI/UX Figma -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1">UI/UX Design with Figma 🎨</span>
+<span class="font-code-sm text-code-sm text-primary font-bold">75%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-pink-100 overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-pink-400 via-rose-300 to-purple-300" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<!-- Terminal Snippet Quote / Philosophy -->
+<div class="bg-pink-50/70 border border-pink-200/80 p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-code-sm text-code-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-400"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<span class="ml-2 text-primary font-semibold">workspace/adinda-cute.sh 💖</span>
+</div>
+<p class="font-code-sm text-code-sm text-primary mt-1 font-medium">
+            &gt; "🌸 Clean code dengan cinta, arsitektur modular yang rapi, dan antarmuka yang selalu bikin bahagia pengguna! ✨"
+          </p>
+</div>
+</div>
+</div>
+<!-- ================= KOLOM KANAN (EXPERIENCE, PROJECTS & EDUCATION) ================= -->
+<div class="flex flex-col gap-space-lg lg:col-span-7 w-full">
+<!-- Bio Summary Block -->
+<div class="bg-surface-container-lowest border border-pink-200/80 rounded-xl p-space-md shadow-[0_8px_24px_rgba(244,114,182,0.1)] flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-pink-200/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-pink-100 border border-pink-200 text-primary font-label-caps text-label-caps font-bold uppercase tracking-wider flex items-center gap-1">
+            🌸 Profile Siswi Rekayasa Perangkat Lunak ✨
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight flex items-center gap-2">
+          Adinda Putri Maharani <span class="text-2xl">🎀</span>
+</h1>
+<p class="font-body-md text-body-md text-primary font-bold">
+          Junior Frontend &amp; Mobile Developer | Siswi RPL SMKN 2 Surakarta 💻🌸
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Siswi berdedikasi tinggi dalam bidang rekayasa perangkat lunak dengan passion pada pembuatan web aplikasi modern yang responsif, RESTful API, dan aplikasi mobile multiplatform yang cantik serta ergonomis. Terbiasa berkolaborasi dengan metodologi Scrum, integrasi modul sensor IoT ESP32, dan siap berkontribusi secara penuh dan ceria dalam program Praktik Kerja Lapangan (PKL) industri teknologi.
+        </p>
+</div>
+<!-- Featured Projects Section -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center text-primary text-sm font-bold">💻</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Proyek Unggulan RPL</h3>
+</div>
+<span class="font-code-sm text-code-sm text-primary bg-pink-50 border border-pink-200 px-2.5 py-0.5 rounded-full font-semibold">🎀 3 Karya Terpilih</span>
+</div>
+<!-- Project 1: SIAKAD & RFID -->
+<div class="bg-surface-container-lowest border border-pink-200/80 rounded-xl p-space-md shadow-[0_6px_20px_rgba(244,114,182,0.08)] flex flex-col gap-space-sm relative overflow-hidden group hover:border-pink-300 transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span> ✨ Live Production di Sekolah
+              </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">SIAKAD &amp; Presensi RFID SMKN 2 SKA 🌸</h4>
+</div>
+<div class="w-9 h-9 rounded-full bg-pink-50 border border-pink-200 flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">contactless</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Platform manajemen presensi siswa otomatis berbasis reader RFID RC522 terintegrasi backend Laravel. Dilengkapi portal absensi real-time guru, rekapan kehadiran bulanan otomatis, dan integrasi WhatsApp Gateway notifikasi orang tua.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-xs">
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-pink-50 border border-pink-200 text-primary font-semibold">Laravel 11</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-pink-50 border border-pink-200 text-primary font-semibold">Tailwind CSS</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-pink-50 border border-pink-200 text-primary font-semibold">MySQL</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-pink-50 border border-pink-200 text-primary font-semibold">REST API</span>
+</div>
+</div>
+<!-- Project 2: SoloSmart Trash -->
+<div class="bg-surface-container-lowest border border-purple-200/80 rounded-xl p-space-md shadow-[0_6px_20px_rgba(168,85,247,0.08)] flex flex-col gap-space-sm relative overflow-hidden group hover:border-purple-300 transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase flex items-center gap-1">
+<span class="text-xs">🏆</span> Juara LKS Web/Mobile Surakarta ✨
+              </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">SoloSmart Trash – IoT &amp; Mobile App 📱</h4>
+</div>
+<div class="w-9 h-9 rounded-full bg-purple-50 border border-purple-200 flex items-center justify-center text-secondary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">recycling</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Aplikasi mobile pintar pemantau kapasitas tempat sampah publik di Kota Surakarta. Mengirimkan data telemetri volume ultrasonik via mikrokontroler ESP32 ke Firebase Realtime DB dan navigasi rute armada pengangkut DLH Solo.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-xs">
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-secondary font-semibold">Flutter</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-secondary font-semibold">Firebase</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-secondary font-semibold">ESP32 C++</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-secondary font-semibold">Google Maps SDK</span>
+</div>
+</div>
+<!-- Project 3: KasirPoint POS -->
+<div class="bg-surface-container-lowest border border-amber-200/80 rounded-xl p-space-md shadow-[0_6px_20px_rgba(217,119,6,0.08)] flex flex-col gap-space-sm relative overflow-hidden group hover:border-amber-300 transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-amber-700 font-bold uppercase flex items-center gap-1">
+<span class="text-xs">🍰</span> Proyek Pengabdian UMKM Solo 💖
+              </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">KasirPoint – POS UMKM Kuliner Surakarta 🏪</h4>
+</div>
+<div class="w-9 h-9 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Aplikasi Point of Sale offline-first untuk pedagang kuliner lokal di Pasar Gede Solo. Dilengkapi manajemen stok bahan baku, cetak struk thermal via Bluetooth ESC/POS, dan pelaporan laba rugi bulanan.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-xs">
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-semibold">React</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-semibold">Node.js</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-semibold">Express</span>
+<span class="font-code-sm text-code-sm px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-semibold">IndexedDB</span>
+</div>
+</div>
+</div>
+<!-- Education History Timeline -->
+<div class="bg-surface-container-lowest border border-pink-200/80 rounded-xl p-space-md shadow-[0_8px_24px_rgba(244,114,182,0.1)] flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center text-primary text-sm font-bold">🎓</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Riwayat Pendidikan</h3>
+</div>
+<div class="relative pl-6 flex flex-col gap-space-md">
+<!-- Timeline Vertical Spine -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-pink-200"></div>
+<!-- Timeline Node 1: SMKN 2 Surakarta (Active) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-pink-100"></div>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-bold">2023 – Sekarang (Kelas XII) 🌸</span>
+<span class="font-label-caps text-label-caps bg-pink-100 text-primary border border-pink-200 px-2.5 py-0.5 rounded-full font-bold">⭐ Rata-rata: 92.4</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">SMK Negeri 2 Surakarta</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Program Keahlian: Rekayasa Perangkat Lunak (RPL). Pembelajaran intensif Algoritma &amp; Pemrograman, Pemrograman Berorientasi Objek, Basis Data Relasional, serta Pemrograman Web dan Perangkat Bergerak (PWPB).
+            </p>
+</div>
+<!-- Timeline Node 2: SMP Negeri 1 Surakarta -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[19px] top-1 w-3.5 h-3.5 rounded-full bg-pink-300"></div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-semibold">2020 – 2023 🎀</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">SMP Negeri 1 Surakarta</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Fokus pada Sains dan Ekstrakurikuler Komputer/Teknologi Informasi. Lulus dengan predikat sangat memuaskan.
+            </p>
+</div>
+</div>
+</div>
+<!-- Badges, Certifications & Achievements -->
+<div class="bg-surface-container-lowest border border-pink-200/80 rounded-xl p-space-md shadow-[0_8px_24px_rgba(244,114,182,0.1)] flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-purple-100 flex items-center justify-center text-secondary text-sm font-bold">✨</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Prestasi &amp; Lisensi Sertifikasi</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Cert 1 -->
+<div class="bg-pink-50/60 border border-pink-200 p-space-sm rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="text-base">🏆</span>
+<span class="font-label-caps text-label-caps font-bold">JUARA 1 KOTA</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-bold">LKS RPL Surakarta 2024</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant">Bidang Web Technologies &amp; Mobile App Development</p>
+</div>
+<!-- Cert 2 -->
+<div class="bg-purple-50/60 border border-purple-200 p-space-sm rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="text-base">🌸</span>
+<span class="font-label-caps text-label-caps font-bold">SERTIFIKASI NASIONAL</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-bold">BNSP Junior Web Dev</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant">Lembaga Sertifikasi Profesi (LSP) P1 SMK Negeri 2 Solo</p>
+</div>
+<!-- Cert 3 -->
+<div class="bg-amber-50/60 border border-amber-200 p-space-sm rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-amber-700">
+<span class="text-base">💖</span>
+<span class="font-label-caps text-label-caps font-bold">DICODING ACADEMY</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-bold">Flutter Developer Expert</span>
+<p class="font-code-sm text-code-sm text-on-surface-variant">Clean Architecture, State Management BLoC &amp; TDD</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Footer Credits -->
+<div class="w-full flex flex-col sm:flex-row items-center justify-between py-space-sm text-pink-700/80 font-code-sm text-code-sm gap-2">
+<div class="flex items-center gap-1.5">
+<span class="text-sm">🌸</span>
+<span>Kompetensi Keahlian Rekayasa Perangkat Lunak • SMKN 2 Surakarta ✨</span>
+</div>
+<span>© 2025 Adinda Putri Maharani. Made with 💖 &amp; Code.</span>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl border-t border-pink-100 shadow-[0_-2px_12px_rgba(244,114,182,0.08)]" data-active-classes="text-primary border-t-2 border-primary"><div class="flex justify-around items-center h-16 px-gutter-sm"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 transition-colors text-primary border-t-2 border-primary" data-path="cv-resume" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-code-sm text-code-sm font-semibold">Resume 🌸</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[20px]">code_blocks</span><span class="font-code-sm text-code-sm font-medium">Portfolio 💻</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="skills" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-code-sm text-code-sm font-medium">Skills ✨</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">send</span><span class="font-code-sm text-code-sm font-medium">Contact 💌</span></a></div></nav></body></html>
